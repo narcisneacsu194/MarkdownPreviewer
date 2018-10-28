@@ -43,6 +43,7 @@ textarea{
   height: 100%;
   padding: 30px;
   margin-bottom: 50px;
+  overflow-x:auto;
 }
 
 pre {
@@ -81,14 +82,19 @@ td, th {
   padding: 10px !important;
 }
 
-#some-id{
+#editor-div{
    margin: auto;
    width: 50%;
    padding: 15px;
 }
 
-#some-id2{
+#previewer-div{
   margin: auto;
   width: 50%;
   padding: 15px;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }

@@ -16,7 +16,7 @@ class Editor extends Component{
   }
 
   render(){
-    return (<div id="some-id">
+    return (<div>
       <div className="row box-header" id="editor-header">
           <div className="col-md-6">
             <h6>Editor</h6>

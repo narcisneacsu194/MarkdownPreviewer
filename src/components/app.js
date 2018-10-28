@@ -14,16 +14,17 @@ export default class App extends Component {
   }
 
   changeWindowSize(event, altWindowId, currentWindow){
+    let currentElem = document.getElementById(currentWindow);
+
     if(this.state.showAltWindow){
       document.getElementById(altWindowId).setAttribute('style', 'display: none');
-      const currentElem = document.getElementById(currentWindow);
       currentElem.setAttribute('style', 'width: 100%;');
-      console.log("Current element: ", currentElem);
       this.setState({
         showAltWindow: false
       });
     }else{
       document.getElementById(altWindowId).setAttribute('style', 'display: block');
+      currentElem.setAttribute('style', 'width: 50%;');
       this.setState({
         showAltWindow: true
       });
@@ -34,10 +35,10 @@ export default class App extends Component {
     return (
       <div>
         <div className="row" id="editor-div">
-          <Editor func={this.changeWindowSize} altWindow="previewer-div" currentWindow="editor-header"/>
+          <Editor func={this.changeWindowSize} altWindow="previewer-div" currentWindow="editor-div"/>
         </div>
         <div className="row" id="previewer-div">
-          <Previewer func={this.changeWindowSize} altWindow="editor-div" currentWindow="previewer-header"/>
+          <Previewer func={this.changeWindowSize} altWindow="editor-div" currentWindow="previewer-div"/>
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 const Previewer = (props) => {
-    return (<div id="some-id2">
+    return (<div>
       <div className="row box-header" id="previewer-header">
           <div className="col-md-6">
             <h6>Previewer</h6>

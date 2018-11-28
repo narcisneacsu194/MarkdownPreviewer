@@ -24,7 +24,7 @@ export default class App extends Component {
       });
     }else{
       document.getElementById(altWindowId).setAttribute('style', 'display: block');
-      currentElem.setAttribute('style', 'width: 50%;');
+      currentElem.setAttribute('style', 'width: 70%;');
       this.setState({
         showAltWindow: true
       });
